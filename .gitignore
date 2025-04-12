@@ -1,0 +1,15 @@
+# Environment variables
+.env
+
+# Node.js dependencies (if frontend exists)
+node_modules/
+frontend/node_modules/
+
+# Build outputs
+backend/server
+frontend/.next/
+frontend/out/
+
+# OS specific
+.DS_Store
+Thumbs.db

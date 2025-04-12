@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    
+    volumes: #開発時のみ
+      - ./backend:/app
+    
+    environment:
+      - APP_NAME=Matching App API (Dev)
+    env_file:
+      - .env
+    
+    container_name: matching_app_backend_dev
+
+    restart: unless-stopped
+
+    
